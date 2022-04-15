@@ -70,6 +70,38 @@
         animation-name: fade;
         animation-duration: 1.5s;
       }
+      .grid-cont{
+        height: 600px;
+        gap: 5px;
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-template-rows: auto auto;
+      }
+      .items{
+        position: relative;
+        background: url(../images/Chem\ 1.jfif);
+        background-size: cover;
+        background-position: center;
+        color: white;
+        font-size: 25px;
+      }
+
+      .grid-cont .items p{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      .grid-cont .items > div{
+        width: 80%;
+        height: 50%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: rgba(1,1,1,0.4);
+      }
 
       @keyframes fade {
         from {
@@ -129,6 +161,17 @@
       <span class="dot"></span>
       <span class="dot"></span>
       <span class="dot"></span>
+    </div>
+
+    <p style="text-align: center;">ჩვენი აკადემიური პროგრამები</p>
+    
+    <div class="grid-cont">
+      <div class="items"><div><p>ქიმია / ბიოქიმია</p></div></div>
+      <div class="items">2</div>
+      <div class="items">3</div>
+      <div class="items">4</div>
+      <div class="items">5</div>
+      <div class="items">8</div>
     </div>
 
     <footer>
