@@ -1,55 +1,179 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../styles/style.css">
-    <link rel="stylesheet" href="../styles/fonts.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles/style.css" />
+    <link rel="stylesheet" href="../styles/fonts.css" />
     <link rel="icon" href="../images/favicon.png" />
     <title>სიახლეები</title>
-</head>
-<body>
+    <style>
+      .grid-cont {
+        display: grid;
+        margin: 10px;
+        grid-template-columns: auto auto auto;
+        grid-template-rows: auto auto;
+        height: 600px;
+        gap: 10px;
+      }
+      .grid-child {
+        position: relative;
+        padding: 5px;
+        border: 1px solid grey;
+        border-radius: 1%;
+      }
+      .child1 {
+        background: url(../images/ukraine\ flag.png);
+        background-size: cover;
+        background-position: center;
+      }
+      .child2 {
+        background: url(../images/meeting.jpg);
+        background-size: cover;
+        background-position: center;
+      }
+      .child3 {
+        background: url(../images/dajildoveba.jpg);
+        background-size: cover;
+        background-position: center;
+      }
+      .child4 {
+        background: url(../images/marie\ curie.jpg);
+        background-size: cover;
+        background-position: center;
+      }
+      .child5 {
+        background: url(../images/Dinner.jpg);
+        background-size: cover;
+        background-position: center;
+      }
+      .child6 {
+        background: url(../images/Career\ poster\ for\ website.jpg);
+        background-size: cover;
+        background-position: center;
+      }
+      .grid-child > a {
+          font-size: 20px;
+        position: absolute;
+        text-align: center;
+        bottom: 0%;
+        color: white;
+        text-decoration: underline;
+      }
+      .grid-child > a:active {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
     <div id="mySidebar" class="sidebar">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-        <a href="./main.html">მთავარი</a>
-        <a style="color: red" href="./news.html">სიახლეები</a>
-        <a href="./academics.html">აკადემიური ინფორმაცია</a>
-        <a href="./clubs.html">სტუდენტური კლუბები</a>
-        <a href="./about.html">ჩვენს შესახებ</a>
-        <a href="./contacts.html">კონტაქტი</a>
-      </div>
-  
-      <header>
-        <nav>
-          <ul>
-            <a href="./main.html"
-              ><img class="logo" src="../images/sdsu-logo.png" alt="SDSU logo"
-            /></a>
-            <li class="nav"><a href="./main.html">მთავარი</a></li>
-            <li class="nav"><a style="color: red" href="./news.html">სიახლეები</a></li>
-            <li class="nav"><a href="./academics.html">აკადემიური ინფორმაცია</a></li>
-            <li class="nav"><a href="./clubs.html">სტუდენტური კლუბები</a></li>
-            <li class="nav"><a href="./about.html">ჩვენს შესახებ</a></li>
-            <li class="nav"><a href="./contacts.html">კონტაქტი</a></li>
-            <div id="main" style="position: absolute; right: 0; top: 0">
-              <button class="openbtn" onclick="openNav()">☰</button>
-            </div>
-            <div class="clear"></div>
-          </ul>
-        </nav>
-      </header>
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+      <a href="./main.html">მთავარი</a>
+      <a style="color: red" href="./news.html">სიახლეები</a>
+      <a href="./academics.html">აკადემიური ინფორმაცია</a>
+      <a href="./clubs.html">სტუდენტური კლუბები</a>
+      <a href="./about.html">ჩვენს შესახებ</a>
+      <a href="./contacts.html">კონტაქტი</a>
+    </div>
 
-      <script>
-        function openNav() {
-          document.getElementById("mySidebar").style.width = "250px";
-          document.getElementById("main").style.marginLeft = "250px";
-        }
-  
-        function closeNav() {
-          document.getElementById("mySidebar").style.width = "0";
-          document.getElementById("main").style.marginLeft = "0";
-        }
-      </script>
-</body>
+    <header>
+      <nav>
+        <ul>
+          <a href="./main.html"
+            ><img class="logo" src="../images/sdsu-logo.png" alt="SDSU logo"
+          /></a>
+          <li class="nav"><a href="./main.html">მთავარი</a></li>
+          <li class="nav">
+            <a style="color: red" href="./news.html">სიახლეები</a>
+          </li>
+          <li class="nav">
+            <a href="./academics.html">აკადემიური ინფორმაცია</a>
+          </li>
+          <li class="nav"><a href="./clubs.html">სტუდენტური კლუბები</a></li>
+          <li class="nav"><a href="./about.html">ჩვენს შესახებ</a></li>
+          <li class="nav"><a href="./contacts.html">კონტაქტი</a></li>
+          <div id="main" style="position: absolute; right: 0; top: 0">
+            <button class="openbtn" onclick="openNav()">☰</button>
+          </div>
+          <div class="clear"></div>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="grid-cont">
+        <div class="grid-child child1">
+          <a href=""
+            >სან დიეგოს სახელმწიფო უნივერსიტეტის პრეზიდენტის მიმართვა</a
+          >
+        </div>
+        <div class="grid-child child2">
+          <a href=""
+            >სდსუ საქართველოს მრჩეველთა საბჭოს შეხვედრა - შემოდგომა 2021</a
+          >
+        </div>
+        <div class="grid-child child3">
+          <a href=""
+            >აკადემიური პერსონალის განვითარების პროგრამის დაჯილდოების ცერემონიალი</a
+          >
+        </div>
+        <div class="grid-child child4">
+          <a href=""
+            >2021 წლის ამერიკის ქიმიური საზოგადოების ჯილდოები</a
+          >
+        </div>
+        <div class="grid-child child5">
+          <a href=""
+            >პრეზიდენტი დე ლა ტორე ქართველ სტუდენტებს მასპინძლობს</a
+          >
+        </div>
+        <div class="grid-child child6">
+          <a href=""
+            >კარიერის თვე სდსუ საქართველოში - შემოდგომა 2021</a
+          >
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <p>სოციალური ქსელები</p>
+      <div class="flex-cont">
+        <div class="child">
+          <a target="_blank" href="https://www.facebook.com/SDSU.Georgia"
+            ><img src="../images/facebook.svg" alt="facebook"
+          /></a>
+        </div>
+        <div class="child">
+          <a target="_blank" href="https://twitter.com/sdsu"
+            ><img src="../images/twitter.svg" alt="twitter"
+          /></a>
+        </div>
+        <div class="child">
+          <a
+            target="_blank"
+            href="https://www.youtube.com/channel/UCahHsmnhZB7Tm6jb2J6-mjA/featured?view_as=subscriber"
+            ><img src="../images/youtube.svg" alt="youtube"
+          /></a>
+        </div>
+        <div class="child">
+          <a
+            target="_blank"
+            href="https://www.linkedin.com/company/san-diego-state-university-georgia"
+            ><img src="../images/linkedin.svg" alt="linkedin"
+          /></a>
+        </div>
+      </div>
+    </footer>
+    <script>
+      function openNav() {
+        document.getElementById("mySidebar").style.width = "250px";
+        document.getElementById("main").style.marginLeft = "250px";
+      }
+
+      function closeNav() {
+        document.getElementById("mySidebar").style.width = "0";
+        document.getElementById("main").style.marginLeft = "0";
+      }
+    </script>
+  </body>
 </html>

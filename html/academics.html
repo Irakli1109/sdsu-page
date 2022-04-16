@@ -1,54 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../styles/style.css">
-    <link rel="stylesheet" href="../styles/fonts.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles/style.css" />
+    <link rel="stylesheet" href="../styles/fonts.css" />
     <link rel="icon" href="../images/favicon.png" />
     <title>აკადემიური ინფორმაცია</title>
-</head>
-<body>
+    <style>
+        table{
+            margin: auto;
+            margin-top: 10px;
+            width: 60%;
+            height: 100vh;
+            border: 2px grey solid;
+        }
+        tr:nth-child(even){
+            background-color: rgba(222, 210, 199, 0.69);
+        }
+        tr:hover{
+            background-color: rgba(75, 73, 71, 0.69);
+        }
+        td{
+            border-collapse: collapse;
+            margin: 0;
+        }
+        
+    </style>
+  </head>
+  <body>
     <div id="mySidebar" class="sidebar">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-        <a href="./main.html">მთავარი</a>
-        <a href="./news.html">სიახლეები</a>
-        <a style="color: red" href="./academics.html">აკადემიური ინფორმაცია</a>
-        <a href="./clubs.html">სტუდენტური კლუბები</a>
-        <a href="./about.html">ჩვენს შესახებ</a>
-        <a href="./contacts.html">კონტაქტი</a>
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+      <a href="./main.html">მთავარი</a>
+      <a href="./news.html">სიახლეები</a>
+      <a style="color: red" href="./academics.html">აკადემიური ინფორმაცია</a>
+      <a href="./clubs.html">სტუდენტური კლუბები</a>
+      <a href="./about.html">ჩვენს შესახებ</a>
+      <a href="./contacts.html">კონტაქტი</a>
+    </div>
+
+    <header>
+      <nav>
+        <ul>
+          <a href="./main.html"
+            ><img class="logo" src="../images/sdsu-logo.png" alt="SDSU logo"
+          /></a>
+          <li class="nav"><a href="./main.html">მთავარი</a></li>
+          <li class="nav"><a href="./news.html">სიახლეები</a></li>
+          <li class="nav">
+            <a style="color: red" href="./academics.html"
+              >აკადემიური ინფორმაცია</a
+            >
+          </li>
+          <li class="nav"><a href="./clubs.html">სტუდენტური კლუბები</a></li>
+          <li class="nav"><a href="./about.html">ჩვენს შესახებ</a></li>
+          <li class="nav"><a href="./contacts.html">კონტაქტი</a></li>
+          <div id="main" style="position: absolute; right: 0; top: 0">
+            <button class="openbtn" onclick="openNav()">☰</button>
+          </div>
+          <div class="clear"></div>
+        </ul>
+      </nav>
+    </header>
+    <main>
+        <table>
+            <tr><td style="text-align: center;">Classes</td></tr>
+            <tr><td>January 17</td></tr>
+            <tr><td>May 7</td></tr>
+            <tr><td style="text-align: center;">Holidays</td></tr>
+            <tr><td>19-Jan <span style="margin-left: 37%;">Holiday - Natlisgeba</span></td></tr>
+            <tr><td>3-Mar <span style="margin-left: 37%;">Holiday - Mother's Day</span></td></tr>
+            <tr><td>8-Mar <span style="margin-left: 32%;">Holiday - International Women’s Day</span></td></tr>
+            <tr><td>22-Apr <span style="margin-left: 34%;">Holiday - Orthodox Good Friday</span></td></tr>
+            <tr><td>25-Apr <span style="margin-left: 36%;">Orthodox Easter Monday</span></td></tr>
+            <tr><td>9-May <span style="margin-left: 28%;">Holiday - Victory Day, Holiday - St Andrew's Day</span></td></tr>
+            <tr><td style="text-align: center;">Spring 2022 Final Exams</td></tr>
+            <tr><td>May 10 - 17 <span style="margin-left: 17%;">	
+                they will run 10-11; 13-14; 16-17 (because of the holiday, and the Sunday).</span></td></tr>
+        </table>
+    </main>
+
+    <footer>
+      <p>სოციალური ქსელები</p>
+      <div class="flex-cont">
+        <div class="child">
+          <a target="_blank" href="https://www.facebook.com/SDSU.Georgia"
+            ><img src="../images/facebook.svg" alt="facebook"
+          /></a>
+        </div>
+        <div class="child">
+          <a target="_blank" href="https://twitter.com/sdsu"
+            ><img src="../images/twitter.svg" alt="twitter"
+          /></a>
+        </div>
+        <div class="child">
+          <a
+            target="_blank"
+            href="https://www.youtube.com/channel/UCahHsmnhZB7Tm6jb2J6-mjA/featured?view_as=subscriber"
+            ><img src="../images/youtube.svg" alt="youtube"
+          /></a>
+        </div>
+        <div class="child">
+          <a
+            target="_blank"
+            href="https://www.linkedin.com/company/san-diego-state-university-georgia"
+            ><img src="../images/linkedin.svg" alt="linkedin"
+          /></a>
+        </div>
       </div>
-  
-      <header>
-        <nav>
-          <ul>
-            <a href="./main.html"
-              ><img class="logo" src="../images/sdsu-logo.png" alt="SDSU logo"
-            /></a>
-            <li class="nav"><a href="./main.html">მთავარი</a></li>
-            <li class="nav"><a href="./news.html">სიახლეები</a></li>
-            <li class="nav"><a style="color: red" href="./academics.html">აკადემიური ინფორმაცია</a></li>
-            <li class="nav"><a href="./clubs.html">სტუდენტური კლუბები</a></li>
-            <li class="nav"><a href="./about.html">ჩვენს შესახებ</a></li>
-            <li class="nav"><a href="./contacts.html">კონტაქტი</a></li>
-            <div id="main" style="position: absolute; right: 0; top: 0">
-              <button class="openbtn" onclick="openNav()">☰</button>
-            </div>
-            <div class="clear"></div>
-          </ul>
-        </nav>
-      </header>
-      <script>
-        function openNav() {
-          document.getElementById("mySidebar").style.width = "250px";
-          document.getElementById("main").style.marginLeft = "250px";
+    </footer>
+
+    <script>
+      let slideIndex = 0;
+      showSlides();
+
+      function showSlides() {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
         }
-  
-        function closeNav() {
-          document.getElementById("mySidebar").style.width = "0";
-          document.getElementById("main").style.marginLeft = "0";
+        slideIndex++;
+        if (slideIndex > slides.length) {
+          slideIndex = 1;
         }
-      </script>
-</body>
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+        setTimeout(showSlides, 2000); // Change image every 2 seconds
+      }
+    </script>
+    <script>
+      function openNav() {
+        document.getElementById("mySidebar").style.width = "250px";
+        document.getElementById("main").style.marginLeft = "250px";
+      }
+
+      function closeNav() {
+        document.getElementById("mySidebar").style.width = "0";
+        document.getElementById("main").style.marginLeft = "0";
+      }
+    </script>
+  </body>
 </html>
