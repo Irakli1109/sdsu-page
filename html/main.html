@@ -70,37 +70,64 @@
         animation-name: fade;
         animation-duration: 1.5s;
       }
-      .grid-cont{
+      .grid-cont {
         height: 600px;
         gap: 5px;
         display: grid;
         grid-template-columns: auto auto auto;
         grid-template-rows: auto auto;
       }
-      .items{
+      .items {
         position: relative;
-        background: url(../images/Chem\ 1.jfif);
-        background-size: cover;
-        background-position: center;
         color: white;
         font-size: 25px;
       }
 
-      .grid-cont .items p{
+      .grid-cont .items p {
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
       }
 
-      .grid-cont .items > div{
+      .grid-cont .items > div {
         width: 80%;
         height: 50%;
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        background-color: rgba(1,1,1,0.4);
+        background-color: rgba(1, 1, 1, 0.4);
+      }
+      .item1 {
+        background: url(../images/Chem\ 1.jfif);
+        background-size: cover;
+        background-position: center;
+      }
+      .item2 {
+        background: url(../images/cs.jpg);
+        background-size: cover;
+        background-position: center;
+      }
+      .item3 {
+        background: url(../images/CompE.jpg);
+        background-size: cover;
+        background-position: center;
+      }
+      .item4 {
+        background: url(../images/EE.jpg);
+        background-size: cover;
+        background-position: center;
+      }
+      .item5 {
+        background: url(../images/Civil.jpg);
+        background-size: cover;
+        background-position: center;
+      }
+      .item6 {
+        background: url(../images/Field\ trips\ to\ local\ sites.jpg);
+        background-size: cover;
+        background-position: center;
       }
 
       @keyframes fade {
@@ -112,28 +139,48 @@
         }
       }
 
-
       /* On smaller screens, decrease text size */
-      @media only screen and (max-width: 300px) {
+      @media only screen and (max-width: 600px) {
         .text {
           font-size: 11px;
+        }
+        .grid-cont {
+          height: 600px;
+          gap: 5px;
+          display: grid;
+          grid-template-columns: auto auto;
+          grid-template-rows: auto auto auto;
         }
       }
     </style>
   </head>
   <body>
+    <div id="mySidebar" class="sidebar">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+      <a style="color: red" href="./main.html">მთავარი</a>
+      <a href="./news.html">სიახლეები</a>
+      <a href="./academics.html">აკადემიური ინფორმაცია</a>
+      <a href="./clubs.html">სტუდენტური კლუბები</a>
+      <a href="./about.html">ჩვენს შესახებ</a>
+      <a href="./contacts.html">კონტაქტი</a>
+    </div>
+
     <header>
       <nav>
         <ul>
           <a href="./main.html"
             ><img class="logo" src="../images/sdsu-logo.png" alt="SDSU logo"
           /></a>
-          <li><a style="color: red" href="./main.html">მთავარი</a></li>
-          <li><a href="./news.html">სიახლეები</a></li>
-          <li><a href="./academics.html">აკადემიური ინფორმაცია</a></li>
-          <li><a href="./clubs.html">სტუდენტური კლუბები</a></li>
-          <li><a href="./about.html">ჩვენს შესახებ</a></li>
-          <li><a href="./contacts.html">კონტაქტი</a></li>
+          <li class="nav"><a style="color: red" href="./main.html">მთავარი</a></li>
+          <li class="nav"><a href="./news.html">სიახლეები</a></li>
+          <li class="nav"><a href="./academics.html">აკადემიური ინფორმაცია</a></li>
+          <li class="nav"><a href="./clubs.html">სტუდენტური კლუბები</a></li>
+          <li class="nav"><a href="./about.html">ჩვენს შესახებ</a></li>
+          <li class="nav"><a href="./contacts.html">კონტაქტი</a></li>
+          <div id="main" style="position: absolute; right: 0; top: 0">
+            <button class="openbtn" onclick="openNav()">☰</button>
+          </div>
+          <div class="clear"></div>
         </ul>
       </nav>
     </header>
@@ -163,25 +210,66 @@
       <span class="dot"></span>
     </div>
 
-    <p style="text-align: center;">ჩვენი აკადემიური პროგრამები</p>
-    
+    <p
+      style="
+        text-align: center;
+        font-weight: bold;
+        font-size: 25px;
+        margin: 30px;
+      "
+    >
+      ჩვენი აკადემიური პროგრამები
+    </p>
+
     <div class="grid-cont">
-      <div class="items"><div><p>ქიმია / ბიოქიმია</p></div></div>
-      <div class="items">2</div>
-      <div class="items">3</div>
-      <div class="items">4</div>
-      <div class="items">5</div>
-      <div class="items">8</div>
+      <div class="items item1">
+        <div><p>ქიმია / ბიოქიმია</p></div>
+      </div>
+      <div class="items item2">
+        <div><p>კომპიუტერული მეცნიერება</p></div>
+      </div>
+      <div class="items item3">
+        <div><p>კომპიუტერული ინჟინერია</p></div>
+      </div>
+      <div class="items item4">
+        <div><p>ელექტრული ინჟინერია</p></div>
+      </div>
+      <div class="items item5">
+        <div><p>სამოქალაქო ინჟინერია</p></div>
+      </div>
+      <div class="items item6">
+        <div><p>სამშენებლო ინჟინერია</p></div>
+      </div>
     </div>
 
     <footer>
-        <p>სოციალური ქსელები</p>
-        <div class="flex-cont">
-            <div class="child"><a target="_blank" href="https://www.facebook.com/SDSU.Georgia"><img src="../images/facebook.svg" alt="facebook"></a></div>
-            <div class="child"><a target="_blank" href="https://twitter.com/sdsu"><img src="../images/twitter.svg" alt="twitter"></a></div>
-            <div class="child"><a target="_blank" href="https://www.youtube.com/channel/UCahHsmnhZB7Tm6jb2J6-mjA/featured?view_as=subscriber"><img src="../images/youtube.svg" alt="youtube"></a></div>
-            <div class="child"><a target="_blank" href="https://www.linkedin.com/company/san-diego-state-university-georgia"><img src="../images/linkedin.svg" alt="linkedin"></a></div>
+      <p>სოციალური ქსელები</p>
+      <div class="flex-cont">
+        <div class="child">
+          <a target="_blank" href="https://www.facebook.com/SDSU.Georgia"
+            ><img src="../images/facebook.svg" alt="facebook"
+          /></a>
         </div>
+        <div class="child">
+          <a target="_blank" href="https://twitter.com/sdsu"
+            ><img src="../images/twitter.svg" alt="twitter"
+          /></a>
+        </div>
+        <div class="child">
+          <a
+            target="_blank"
+            href="https://www.youtube.com/channel/UCahHsmnhZB7Tm6jb2J6-mjA/featured?view_as=subscriber"
+            ><img src="../images/youtube.svg" alt="youtube"
+          /></a>
+        </div>
+        <div class="child">
+          <a
+            target="_blank"
+            href="https://www.linkedin.com/company/san-diego-state-university-georgia"
+            ><img src="../images/linkedin.svg" alt="linkedin"
+          /></a>
+        </div>
+      </div>
     </footer>
 
     <script>
@@ -205,6 +293,17 @@
         slides[slideIndex - 1].style.display = "block";
         dots[slideIndex - 1].className += " active";
         setTimeout(showSlides, 2000); // Change image every 2 seconds
+      }
+    </script>
+    <script>
+      function openNav() {
+        document.getElementById("mySidebar").style.width = "250px";
+        document.getElementById("main").style.marginLeft = "250px";
+      }
+
+      function closeNav() {
+        document.getElementById("mySidebar").style.width = "0";
+        document.getElementById("main").style.marginLeft = "0";
       }
     </script>
   </body>

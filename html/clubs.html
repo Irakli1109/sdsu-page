@@ -10,18 +10,45 @@
     <title>სტუდენტური კლუბები</title>
 </head>
 <body>
-    <header>
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+        <a href="./main.html">მთავარი</a>
+        <a href="./news.html">სიახლეები</a>
+        <a href="./academics.html">აკადემიური ინფორმაცია</a>
+        <a style="color: red" href="./clubs.html">სტუდენტური კლუბები</a>
+        <a href="./about.html">ჩვენს შესახებ</a>
+        <a href="./contacts.html">კონტაქტი</a>
+      </div>
+  
+      <header>
         <nav>
-            <ul>
-                <a href="./main.html"><img class="logo" src="../images/sdsu-logo.png" alt="SDSU logo"></a>
-                <li><a href="./main.html">მთავარი</a></li>
-                <li><a href="./news.html">სიახლეები</a></li>
-                <li><a href="./academics.html">აკადემიური ინფორმაცია</a></li>
-                <li><a style="color: red;" href="./clubs.html">სტუდენტური კლუბები</a></li>
-                <li><a href="./about.html">ჩვენს შესახებ</a></li>
-                <li><a href="./contacts.html">კონტაქტი</a></li>
-            </ul>
+          <ul>
+            <a href="./main.html"
+              ><img class="logo" src="../images/sdsu-logo.png" alt="SDSU logo"
+            /></a>
+            <li class="nav"><a href="./main.html">მთავარი</a></li>
+            <li class="nav"><a href="./news.html">სიახლეები</a></li>
+            <li class="nav"><a href="./academics.html">აკადემიური ინფორმაცია</a></li>
+            <li class="nav"><a style="color: red" href="./clubs.html">სტუდენტური კლუბები</a></li>
+            <li class="nav"><a href="./about.html">ჩვენს შესახებ</a></li>
+            <li class="nav"><a href="./contacts.html">კონტაქტი</a></li>
+            <div id="main" style="position: absolute; right: 0; top: 0">
+              <button class="openbtn" onclick="openNav()">☰</button>
+            </div>
+            <div class="clear"></div>
+          </ul>
         </nav>
-    </header>
+      </header>
+      <script>
+        function openNav() {
+          document.getElementById("mySidebar").style.width = "250px";
+          document.getElementById("main").style.marginLeft = "250px";
+        }
+  
+        function closeNav() {
+          document.getElementById("mySidebar").style.width = "0";
+          document.getElementById("main").style.marginLeft = "0";
+        }
+      </script>
 </body>
 </html>
