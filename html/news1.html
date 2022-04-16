@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles/fonts.css" />
+    <link rel="icon" href="../images/favicon.png" />
+    <link rel="stylesheet" href="../styles/style.css" />
+    <title>შესვლა</title>
+    <style>
+        main{
+            margin: auto;
+            width: 70%;
+            font-family:Georgia, 'Times New Roman', Times, serif;
+        }
+        main img{
+            height: 550px;
+        }
+    </style>
+  </head>
+  <body>
+    <div id="mySidebar" class="sidebar">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+      <a href="./main.html">მთავარი</a>
+      <a style="color: red" href="./news.html">სიახლეები</a>
+      <a href="./academics.html">აკადემიური ინფორმაცია</a>
+      <a href="./clubs.html">სტუდენტური კლუბები</a>
+      <a href="./about.html">ჩვენს შესახებ</a>
+      <a href="./contacts.html">კონტაქტი</a>
+    </div>
+
+    <header>
+      <nav>
+        <ul>
+          <a href="./main.html"
+            ><img class="logo" src="../images/sdsu-logo.png" alt="SDSU logo"
+          /></a>
+          <li class="nav">
+            <a href="./main.html">მთავარი</a>
+          </li>
+          <li class="nav"><a style="color: red" href="./news.html">სიახლეები</a></li>
+          <li class="nav">
+            <a href="./academics.html">აკადემიური ინფორმაცია</a>
+          </li>
+          <li class="nav"><a href="./clubs.html">სტუდენტური კლუბები</a></li>
+          <li class="nav"><a href="./about.html">ჩვენს შესახებ</a></li>
+          <li class="nav"><a href="./contacts.html">კონტაქტი</a></li>
+          <div id="main" style="position: absolute; right: 0; top: 0">
+            <button class="openbtn" onclick="openNav()">☰</button>
+          </div>
+          <div class="clear"></div>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <h1>სან დიეგოს სახელმწიფო უნივერსიტეტის პრეზიდენტის მიმართვა</h1>
+      <img src="../images/ukraine flag.png" alt="ukraine flag" />
+      <article>
+        <p>Dear SDSU community,</p>
+        <p>
+          It is terribly painful to watch the events now unfolding in Ukraine.
+          We are horrified by the suffering of those in Ukraine and throughout
+          the region. The impacts from the ongoing attack this week will be felt
+          by people in every corner of the world.
+        </p>
+        <p>
+          Our university community is global, and we have a special relationship
+          with this part of the world. To our students, staff, and faculty who
+          have family and other loved ones in Ukraine and who are in any way
+          tied to the region, we are here with you.
+        </p>
+        <p>
+          If you are impacted by the events in Ukraine and need counseling,
+          academic, work-related, travel, or other emergency support, do not
+          wait to reach out to us. Our university offers a range of support
+          services, and many teams on our campus are on the ready to support and
+          assist you.
+        </p>
+        <p>
+          To all members of our one SDSU community: we encourage you to be
+          united in your compassion for one another. During this time of
+          aggression and violence against the people of Ukraine, and frankly the
+          world, we owe it to each other to be better.
+        </p>
+        <p>Adela de la Torre, Ph.D</p>
+        <p>San Diego State University President</p>
+      </article>
+    </main>
+
+    <footer>
+      <p>სოციალური ქსელები</p>
+      <div class="flex-cont">
+        <div class="child">
+          <a target="_blank" href="https://www.facebook.com/SDSU.Georgia"
+            ><img src="../images/facebook.svg" alt="facebook"
+          /></a>
+        </div>
+        <div class="child">
+          <a target="_blank" href="https://twitter.com/sdsu"
+            ><img src="../images/twitter.svg" alt="twitter"
+          /></a>
+        </div>
+        <div class="child">
+          <a
+            target="_blank"
+            href="https://www.youtube.com/channel/UCahHsmnhZB7Tm6jb2J6-mjA/featured?view_as=subscriber"
+            ><img src="../images/youtube.svg" alt="youtube"
+          /></a>
+        </div>
+        <div class="child">
+          <a
+            target="_blank"
+            href="https://www.linkedin.com/company/san-diego-state-university-georgia"
+            ><img src="../images/linkedin.svg" alt="linkedin"
+          /></a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      let slideIndex = 0;
+      showSlides();
+
+      function showSlides() {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {
+          slideIndex = 1;
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+        setTimeout(showSlides, 2000); // Change image every 2 seconds
+      }
+    </script>
+    <script>
+      function openNav() {
+        document.getElementById("mySidebar").style.width = "250px";
+        document.getElementById("main").style.marginLeft = "250px";
+      }
+
+      function closeNav() {
+        document.getElementById("mySidebar").style.width = "0";
+        document.getElementById("main").style.marginLeft = "0";
+      }
+    </script>
+  </body>
+</html>
