@@ -8,7 +8,27 @@
     <link rel="icon" href="../images/favicon.png" />
     <link rel="stylesheet" href="../styles/style.css" />
     <title>შესვლა</title>
-    
+    <style>
+      form {
+        width: 20%;
+      }
+      input {
+        width: 100%;
+        margin-bottom: 10px;
+      }
+      input:invalid {
+        border: 1px solid red;
+      }
+    </style>
+    <script>
+      function validateForm() {
+        let x = document.forms["myForm"]["fname"].value;
+        if (x == "") {
+          alert("Name must be filled out");
+          return false;
+        }
+      }
+    </script>
   </head>
   <body>
     <div id="mySidebar" class="sidebar">
@@ -27,9 +47,13 @@
           <a href="./main.html"
             ><img class="logo" src="../images/sdsu-logo.png" alt="SDSU logo"
           /></a>
-          <li class="nav"><a style="color: red" href="./main.html">მთავარი</a></li>
+          <li class="nav">
+            <a style="color: red" href="./main.html">მთავარი</a>
+          </li>
           <li class="nav"><a href="./news.html">სიახლეები</a></li>
-          <li class="nav"><a href="./academics.html">აკადემიური ინფორმაცია</a></li>
+          <li class="nav">
+            <a href="./academics.html">აკადემიური ინფორმაცია</a>
+          </li>
           <li class="nav"><a href="./clubs.html">სტუდენტური კლუბები</a></li>
           <li class="nav"><a href="./about.html">ჩვენს შესახებ</a></li>
           <li class="nav"><a href="./contacts.html">კონტაქტი</a></li>
@@ -40,6 +64,20 @@
         </ul>
       </nav>
     </header>
+    <form action="" method="post">
+      <label for="name">სახელი:</label>
+      <br />
+      <input name="name" type="text" minlength="2" maxlength="50" />
+      <br />
+      <label for="surname">გვარი:</label>
+      <br />
+      <input name="surname" type="text" maxlength="50" />
+      <br />
+      <label for="age">ასაკი</label>
+      <input name="age" type="number" min="6" max="80" />
+      <label for="email">ასაკი</label>
+      <input name="email" type="email" />
+    </form>
 
     <script>
       function openNav() {
