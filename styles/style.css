@@ -152,5 +152,15 @@ footer{
       .nav{
           visibility: hidden;
       }
+      .child{
+        margin: 0;
+        width: 30px;
+        height: 30px;
+      }
   }
 
+  @media only screen and (max-width: 300px){
+    .flex-cont{
+      width: inherit;
+    }
+  }
