@@ -10,11 +10,12 @@
     <title>შესვლა</title>
     <style>
       form {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 20%;
+        display: flex;
+        flex-wrap: wrap;
+        width: 30%;
+        align-items: center;
+        margin: 20px auto;
+        margin-bottom: 45px;
       }
       input {
         height: 34px;
@@ -23,34 +24,58 @@
         border: 1px solid gray;
       }
       input:invalid {
-        border: 1px solid red;
+        border: 2px solid rgb(247, 0, 0);
+      }
+      input:valid {
+        border: 2px solid rgb(19, 165, 3);
       }
       input[type="checkbox"] {
         width: 20px;
         vertical-align: middle;
         margin-right: 7px;
       }
-      .flex-cont{
+      .flex-cont-signin {
         display: flex;
         width: 100%;
         justify-content: space-between;
       }
-      .flex-cont input{
+      .flex-cont-signin input {
         border-radius: 10%;
         cursor: pointer;
         width: 45%;
       }
-      .flex-cont input:first-child{
+      .flex-cont-signin input:first-child {
         background-color: rgb(39, 161, 39);
       }
-      .flex-cont input:nth-child(2){
+      .flex-cont-signin input:nth-child(2) {
         background-color: rgb(205, 63, 63);
       }
-      .flex-cont input:first-child:hover{
+      .flex-cont-signin input:first-child:hover {
         background-color: rgb(1, 255, 1);
       }
-      .flex-cont input:nth-child(2):hover{
+      .flex-cont-signin input:nth-child(2):hover {
         background-color: rgb(252, 0, 0);
+      }
+      body {
+        background-color: #36181f;
+        color: white;
+      }
+      .form-image {
+        width: 100px;
+        transition: width 1s;
+      }
+      .form-image:hover {
+        width: 120px;
+      }
+      @media only screen and (max-width: 1000px) {
+        form {
+          width: 50%;
+        }
+      }
+      @media only screen and (max-width: 500px) {
+        form {
+          width: 80%;
+        }
       }
     </style>
     <script>
@@ -66,11 +91,12 @@
   <body>
     <div id="mySidebar" class="sidebar">
       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-      <a style="color: red" href="./index.html">მთავარი</a>
+      <a href="./index.html">მთავარი</a>
       <a href="./news.html">სიახლეები</a>
       <a href="./academics.html">აკადემიური ინფორმაცია</a>
-      <a href="./clubs.html">სტუდენტური კლუბები</a>
-      <a href="./about.html">ჩვენს შესახებ</a>
+      <a style="color: red" href="./communication.html"
+        >კომუნიკაცია ლექტორთან</a
+      >
       <a href="./contacts.html">კონტაქტი</a>
     </div>
 
@@ -81,14 +107,15 @@
             ><img class="logo" src="../images/sdsu-logo.png" alt="SDSU logo"
           /></a>
           <li class="nav">
-            <a style="color: red" href="./index.html">მთავარი</a>
+            <a href="./index.html">მთავარი</a>
           </li>
           <li class="nav"><a href="./news.html">სიახლეები</a></li>
           <li class="nav">
             <a href="./academics.html">აკადემიური ინფორმაცია</a>
           </li>
-          <li class="nav"><a href="./clubs.html">სტუდენტური კლუბები</a></li>
-          <li class="nav"><a href="./about.html">ჩვენს შესახებ</a></li>
+          <li class="nav">
+            <a style="color: red;" href="./communication.html">კომუნიკაცია ლექტორთან</a>
+          </li>
           <li class="nav"><a href="./contacts.html">კონტაქტი</a></li>
           <div id="main" style="position: absolute; right: 0; top: 0">
             <button class="openbtn" onclick="openNav()">☰</button>
@@ -97,6 +124,9 @@
         </ul>
       </nav>
     </header>
+    <div style="margin: 10px auto; width: 100px">
+      <img class="form-image" src="../images/favicon.png" alt="logo" />
+    </div>
     <form action="./SignIn.html">
       <label for="name">სახელი:</label>
       <br />
@@ -130,12 +160,43 @@
       />
       <label for="email">მეილი:</label>
       <input name="email" type="email" placeholder="მეილი" required />
-      <input name="agreement" type="checkbox" />Accept terms and conditions
-      <div class="flex-cont">
-        <input type="submit" />
-        <input type="reset" />
+      <input name="agreement" type="checkbox" required />ვეთანხმები პირობებს და
+      მოთხოვნებს
+      <div class="flex-cont-signin">
+        <input type="submit" value="გაგზავნა" />
+        <input type="reset" value="წაშლა" />
       </div>
     </form>
+
+    <footer>
+      <p>სოციალური ქსელები</p>
+      <div class="flex-cont">
+        <div class="child">
+          <a target="_blank" href="https://www.facebook.com/SDSU.Georgia"
+            ><img src="../images/facebook.svg" alt="facebook"
+          /></a>
+        </div>
+        <div class="child">
+          <a target="_blank" href="https://twitter.com/sdsu"
+            ><img src="../images/twitter.svg" alt="twitter"
+          /></a>
+        </div>
+        <div class="child">
+          <a
+            target="_blank"
+            href="https://www.youtube.com/channel/UCahHsmnhZB7Tm6jb2J6-mjA/featured?view_as=subscriber"
+            ><img src="../images/youtube.svg" alt="youtube"
+          /></a>
+        </div>
+        <div class="child">
+          <a
+            target="_blank"
+            href="https://www.linkedin.com/company/san-diego-state-university-georgia"
+            ><img src="../images/linkedin.svg" alt="linkedin"
+          /></a>
+        </div>
+      </div>
+    </footer>
 
     <script>
       function openNav() {
