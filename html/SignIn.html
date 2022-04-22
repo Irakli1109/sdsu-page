@@ -10,14 +10,47 @@
     <title>შესვლა</title>
     <style>
       form {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
         width: 20%;
       }
       input {
+        height: 34px;
         width: 100%;
-        margin-bottom: 10px;
+        margin: 10px 0;
+        border: 1px solid gray;
       }
       input:invalid {
         border: 1px solid red;
+      }
+      input[type="checkbox"] {
+        width: 20px;
+        vertical-align: middle;
+        margin-right: 7px;
+      }
+      .flex-cont{
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+      }
+      .flex-cont input{
+        border-radius: 10%;
+        cursor: pointer;
+        width: 45%;
+      }
+      .flex-cont input:first-child{
+        background-color: rgb(39, 161, 39);
+      }
+      .flex-cont input:nth-child(2){
+        background-color: rgb(205, 63, 63);
+      }
+      .flex-cont input:first-child:hover{
+        background-color: rgb(1, 255, 1);
+      }
+      .flex-cont input:nth-child(2):hover{
+        background-color: rgb(252, 0, 0);
       }
     </style>
     <script>
@@ -64,19 +97,44 @@
         </ul>
       </nav>
     </header>
-    <form action="" method="post">
+    <form action="./SignIn.html">
       <label for="name">სახელი:</label>
       <br />
-      <input name="name" type="text" minlength="2" maxlength="50" />
+      <input
+        name="name"
+        type="text"
+        minlength="2"
+        maxlength="50"
+        placeholder="სახელი"
+        required
+      />
       <br />
       <label for="surname">გვარი:</label>
       <br />
-      <input name="surname" type="text" maxlength="50" />
+      <input
+        name="surname"
+        type="text"
+        maxlength="50"
+        placeholder="გვარი"
+        required
+      />
       <br />
-      <label for="age">ასაკი</label>
-      <input name="age" type="number" min="6" max="80" />
-      <label for="email">ასაკი</label>
-      <input name="email" type="email" />
+      <label for="age">ასაკი:</label>
+      <input
+        name="age"
+        type="number"
+        min="6"
+        max="80"
+        placeholder="ასაკი"
+        required
+      />
+      <label for="email">მეილი:</label>
+      <input name="email" type="email" placeholder="მეილი" required />
+      <input name="agreement" type="checkbox" />Accept terms and conditions
+      <div class="flex-cont">
+        <input type="submit" />
+        <input type="reset" />
+      </div>
     </form>
 
     <script>
