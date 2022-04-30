@@ -1,12 +1,13 @@
+/*this style is general one for every page*/
 * {
     box-sizing: border-box;
   }
-
+/*removing unnecesaary default margins and padding*/
 body, html, ul{
     margin: 0;
     padding: 0;
 }
-
+/*style forheader and its child elements*/
 header{
     padding: 5px;
     height: 50px;
@@ -26,7 +27,7 @@ header nav ul li{
     display: inline-block;
     margin-left: 1%;
 }
-
+/*this is for underline animation*/
 header nav ul li:after{
     width: 0%;
     content: '';
@@ -35,7 +36,7 @@ header nav ul li:after{
     height: 3px;
     background-color: red;
 }
-
+/*specifing the time for transition*/
 header nav ul li:hover:after{
     width: 100%;
     transition: 0.3s linear;
@@ -45,19 +46,20 @@ a{
     text-decoration: none;
     color: white;
 }
-
+/*styling the logo image*/
 .logo{
     cursor: pointer;
     vertical-align: middle;
     height: 30px;
 }
-
+/*footer styles*/
 footer{
     color: white;
     height: 100px;
     text-align: center;
     background-color: #231f20;
 }
+/*styling the footer social networks list*/
 .flex-cont{
     display: flex;
     width: 20%;
@@ -73,6 +75,7 @@ footer{
     border-radius: 50%;
     background-color: rgb(130, 124, 124);
 }
+/*effect on hover*/
 .child:hover{
     cursor: pointer;
     background-color: rgb(71, 70, 79);
@@ -81,11 +84,12 @@ footer{
     height: 100%;
     border-radius: 50%;
 }
+/*special class for returning to the normal flow*/
 .clear{
     clear: both;
 }
 
-/*sidebar css */
+/*here goes the sidebar menu styles */
 .sidebar {
     height: 100%;
     width: 0;
@@ -136,7 +140,7 @@ footer{
   #main {
     transition: margin-left 0.5s;
   }
-  
+  /*here goes the responsive design styles for different resolutions*/
 @media only screen and (max-width: 900px) {
     .sidebar {
       padding-top: 15px;

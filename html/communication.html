@@ -7,8 +7,9 @@
     <link rel="stylesheet" href="../styles/fonts.css" />
     <link rel="icon" href="../images/favicon.png" />
     <link rel="stylesheet" href="../styles/style.css" />
-    <title>შესვლა</title>
+    <title>კომუნიკაცია ლექტორთან</title>
     <style>
+      /*styling the form*/
       form {
         display: flex;
         flex-wrap: wrap;
@@ -23,6 +24,7 @@
         margin: 10px 0;
         border: 1px solid gray;
       }
+      /*setting valid and invalid colors*/
       input:invalid {
         border: 2px solid rgb(247, 0, 0);
       }
@@ -60,6 +62,7 @@
         background-color: #36181f;
         color: white;
       }
+      /* sdsu logo on top of image*/
       .form-image {
         width: 100px;
         transition: width 1s;
@@ -67,6 +70,7 @@
       .form-image:hover {
         width: 120px;
       }
+      /*responsive design*/
       @media only screen and (max-width: 1000px) {
         form {
           width: 50%;
@@ -78,15 +82,7 @@
         }
       }
     </style>
-    <script>
-      function validateForm() {
-        let x = document.forms["myForm"]["fname"].value;
-        if (x == "") {
-          alert("Name must be filled out");
-          return false;
-        }
-      }
-    </script>
+    
   </head>
   <body>
     <div id="mySidebar" class="sidebar">
@@ -127,7 +123,7 @@
     <div style="margin: 10px auto; width: 100px">
       <img class="form-image" src="../images/favicon.png" alt="logo" />
     </div>
-    <form action="./SignIn.html">
+    <form action="">
       <label for="name">სახელი:</label>
       <br />
       <input
