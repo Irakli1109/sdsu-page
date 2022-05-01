@@ -44,7 +44,14 @@ header nav ul li:first-child:after{
   height: 3px;
   background-color: transparent;
 }
-
+header nav ul li:nth-child(7):after{
+  width: 0%;
+  content: '';
+  margin-top: 8px;
+  display: block;
+  height: 3px;
+  background-color: transparent;
+}
 /*specifing the time for transition*/
 header nav ul li:hover:after{
     width: 100%;
