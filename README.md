@@ -12,3 +12,7 @@
 - CSS
 - JAVASCRIPT
 - JQUERY
+
+Dear Sir/Madam,
+
+Currently, I am a Bachelor (4th year) year student at San Diego State University which is American University but I am attending its branch in Georgia (country). All studies at my university is conducted in English which I can prove by an official letter from university. So, should I still take English test for proving my proficiency? 
